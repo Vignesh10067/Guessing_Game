@@ -2,8 +2,8 @@
 import random
 
 def play_guessing_game():
-    print("🎯 Welcome to the Number Guessing Game!")
-    print("🔢 I am thinking of a number between 1 and 100.")
+    print("Welcome to the Number Guessing Game!")
+    print("I am thinking of a number between 1 and 100.")
     
     # Generate a secret random integer
     secret_number = random.randint(1, 100)
@@ -11,13 +11,13 @@ def play_guessing_game():
     
     while True:
         try:
-            # Capture user input safely
+            
             user_guess = int(input("\nEnter your guess (1-100): "))
             attempts += 1
             
-            # Evaluate the guess
+            
             if user_guess < 1 or user_guess > 100:
-                print("⚠️ Out of bounds! Please guess a number from 1 to 100.")
+                print("Out of bounds! Please guess a number from 1 to 100.")
                 continue
                 
             if user_guess < secret_number:
